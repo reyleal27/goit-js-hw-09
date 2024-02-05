@@ -14,11 +14,9 @@ const options = {
         const selectedDate = selectedDates[0];
     if (selectedDate < new Date()){
         Notiflix.Notify.failure('Please choose a date in the future');
-        startButton.disabled = "disabled";
         console.log(selectedDate);
     }
     else {
-      startButton.disabled = false;
         console.log(selectedDate.getTime());
     }
 },
@@ -65,8 +63,7 @@ startButton.addEventListener("click", function() {
     minutesCount.innerHTML = minutes;
     secondsCount.innerHTML= seconds;
   
-    startButton.disabled = "disabled";
-    
+
     return { days, hours, minutes, seconds};
 
   
